@@ -1,0 +1,55 @@
+.search-form {
+  display: grid;
+  grid-template-columns: auto;
+  gap: 4px;
+  padding: 4px;
+  margin: 24px 16px;
+  background-color: #ffb700;
+  border: 1px solid #ffb700;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px 0 rgba(26, 26, 26, 0.16);
+  width: 950px;
+}
+.search {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 4px;
+}
+.search > div {
+  margin-bottom: 2px;
+}
+/* .input {
+  width: 250px;
+}
+.input-caLendar {
+  width: 300px;
+} */
+.icon {
+  opacity: 0.3;
+}
+@media screen and (max-width: 991px) {
+  .search-form {
+    width: auto;
+  }
+  .search {
+    grid-template-columns: 100%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .search {
+    margin: 0;
+  }
+}
+@media screen and (max-width: 599px) {
+  .calendar > div > div > div > div > div {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 360px) {
+  .search-form {
+    margin: 24px auto;
+  }
+}

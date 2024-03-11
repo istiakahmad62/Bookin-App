@@ -1,0 +1,11 @@
+.travellers {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 4px;
+}
+.travellers-flight {
+  grid-template-columns: auto auto;
+}
+.travellers > div {
+  margin-bottom: 2px;
+}

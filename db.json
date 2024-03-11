@@ -1,0 +1,136 @@
+{
+  "hotels": [
+    {
+      "id": 1,
+      "image": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/465561867.jpg?k=387048d9915781b9c9d1fc38adb4d6aaff457c7c8d0afa1e194406fb8f47345a&o=&hp=1",
+      "name": "Le Méridien Dhaka",
+      "location": "dhaka",
+      "price": "51617",
+      "rating": "4.6"
+    },
+    {
+      "id": 2,
+      "image": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/465561867.jpg?k=387048d9915781b9c9d1fc38adb4d6aaff457c7c8d0afa1e194406fb8f47345a&o=&hp=1",
+      "name": "Renaissance Dhaka Gulshan Hotel",
+      "location": "dhaka",
+      "price": "27609",
+      "rating": "4.5"
+    },
+    {
+      "id": 3,
+      "image": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/465561867.jpg?k=387048d9915781b9c9d1fc38adb4d6aaff457c7c8d0afa1e194406fb8f47345a&o=&hp=1",
+      "name": "InterContinental Dhaka, an IHG Hotel",
+      "location": "dhaka",
+      "price": "20860",
+      "rating": "4.6"
+    },
+    {
+      "id": 4,
+      "image": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/465561867.jpg?k=387048d9915781b9c9d1fc38adb4d6aaff457c7c8d0afa1e194406fb8f47345a&o=&hp=1",
+      "name": "Pan Pacific Sonargaon Dhaka",
+      "location": "dhaka",
+      "price": "16064",
+      "rating": "4.6"
+    },
+    {
+      "id": 5,
+      "image": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/465561867.jpg?k=387048d9915781b9c9d1fc38adb4d6aaff457c7c8d0afa1e194406fb8f47345a&o=&hp=1",
+      "name": "Radisson Blu Water Garden Hotel, Dhaka",
+      "location": "dhaka",
+      "price": "26882",
+      "rating": "4.5"
+    },
+    {
+      "id": 6,
+      "image": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/465561867.jpg?k=387048d9915781b9c9d1fc38adb4d6aaff457c7c8d0afa1e194406fb8f47345a&o=&hp=1",
+      "name": "Hotel Sarina Dhaka",
+      "location": "dhaka",
+      "price": "10552",
+      "rating": "4.3"
+    },
+    {
+      "id": 7,
+      "image": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/465561867.jpg?k=387048d9915781b9c9d1fc38adb4d6aaff457c7c8d0afa1e194406fb8f47345a&o=&hp=1",
+      "name": "Momo Inn Park & Resort",
+      "location": "dhaka",
+      "price": "17985",
+      "rating": "4.5"
+    },
+    {
+      "id": 8,
+      "image": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/465561867.jpg?k=387048d9915781b9c9d1fc38adb4d6aaff457c7c8d0afa1e194406fb8f47345a&o=&hp=1",
+      "name": "DuSai Resort & Spaa",
+      "location": "dhaka",
+      "price": "13306",
+      "rating": "4.4"
+    },
+    {
+      "id": 9,
+      "image": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/465561867.jpg?k=387048d9915781b9c9d1fc38adb4d6aaff457c7c8d0afa1e194406fb8f47345a&o=&hp=1",
+      "name": "Sea Pearl Beach Resort & Spa Cox's Bazar",
+      "location": "cox's bazar",
+      "price": "18200",
+      "rating": "4.3"
+    },
+    {
+      "id": 10,
+      "image": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/465561867.jpg?k=387048d9915781b9c9d1fc38adb4d6aaff457c7c8d0afa1e194406fb8f47345a&o=&hp=1",
+      "name": "Ocean Paradise Hotel & Resort",
+      "location": "cox's bazar",
+      "price": "7109",
+      "rating": "4.3"
+    }
+  ],
+  "flights": [
+    {
+      "id": 1,
+      "image": "https://media.cnn.com/api/v1/images/stellar/prod/230815100214-01-air-india-new-plane.jpg?c=original",
+      "airline": "Air India",
+      "departureCity": "dhaka",
+      "arrivalCity": "delhi",
+      "departureTime": "9:00 pm",
+      "arrivalTime": "11:00 pm",
+      "price": "24161"
+    },
+    {
+      "id": 2,
+      "image": "https://media.cnn.com/api/v1/images/stellar/prod/230815100214-01-air-india-new-plane.jpg?c=original",
+      "airline": "IndiGo",
+      "departureCity": "dhaka",
+      "arrivalCity": "delhi",
+      "departureTime": "4:25 pm",
+      "arrivalTime": "6:30 pm",
+      "price": "24711"
+    },
+    {
+      "id": 3,
+      "image": "https://media.cnn.com/api/v1/images/stellar/prod/230815100214-01-air-india-new-plane.jpg?c=original",
+      "airline": "Air India",
+      "departureCity": "dhaka",
+      "arrivalCity": "delhi",
+      "departureTime": "9:00 pm",
+      "arrivalTime": "11:00 pm",
+      "price": "24932"
+    },
+    {
+      "id": 4,
+      "image": "https://media.cnn.com/api/v1/images/stellar/prod/230815100214-01-air-india-new-plane.jpg?c=original",
+      "airline": "Air India",
+      "departureCity": "dhaka",
+      "arrivalCity": "delhi",
+      "departureTime": "2:35 pm",
+      "arrivalTime": "4:35 pm",
+      "price": "26350"
+    },
+    {
+      "id": 5,
+      "image": "https://media.cnn.com/api/v1/images/stellar/prod/230815100214-01-air-india-new-plane.jpg?c=original",
+      "airline": "Biman Bangladesh",
+      "departureCity": "dhaka",
+      "arrivalCity": "delhi",
+      "departureTime": "3:15 pm",
+      "arrivalTime": "5:30 pm",
+      "price": "25877"
+    }
+  ]
+}

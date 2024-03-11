@@ -1,0 +1,35 @@
+.search {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 4px;
+}
+.destination,
+.date-picker {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 4px;
+}
+.search > div,
+.destination > div,
+.date-picker > div {
+  margin-bottom: 2px;
+}
+.icon {
+  opacity: 0.3;
+}
+@media screen and (max-width: 991px) {
+  .search {
+    grid-template-columns: 100%;
+  }
+  .calendar {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    width: 100% !important;
+  }
+}
+@media screen and (max-width: 767px) {
+  .search {
+    margin: 0;
+  }
+}

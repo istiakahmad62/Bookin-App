@@ -1,0 +1,20 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "system-ui";
+}
+.container {
+  display: grid;
+  grid-template-columns: auto;
+}
+/* warning-text */
+.danger-text {
+  color:red;
+  font-size: 10px;
+}
+
+@media screen and (max-width: 319px) {
+  .container {
+    width: max-content;
+  }
+}

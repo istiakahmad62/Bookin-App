@@ -1,0 +1,45 @@
+.logo,
+.title,
+.subTitle {
+  color: #ffffff;
+}
+.logo {
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 36px;
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.title {
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 62px;
+}
+.subTitle {
+  margin-top: 4px;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+}
+
+@media screen and (max-width: 767px) {
+  .header {
+    justify-content: flex-start;
+  }
+  .title,
+  .subTitle {
+    color: #000000;
+  }
+  .title {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 36px;
+  }
+  .subTitle {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
