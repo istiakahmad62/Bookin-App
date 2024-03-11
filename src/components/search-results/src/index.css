@@ -1,3 +1,24 @@
+.search-results {
+  position: relative;
+  display: grid;
+  grid-template-columns: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.filter-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 10px;
+}
+.filter-box {
+  width: 25%;
+}
+.card-list {
+  display: grid;
+  gap: 8px;
+}
+/* card */
 .card {
   display: grid;
   grid-template-columns: min-content auto;
@@ -60,18 +81,38 @@
   font-size: 20px;
   font-weight: 500;
 }
-
 @media screen and (max-width: 992px) {
+  .search-results {
+    grid-template-columns: 100%;
+    padding: 0 40px;
+  }
+  .hotel,
+  .flight {
+    left: 0;
+  }
+  /* card */
   .card {
     min-width: 0;
   }
 }
 @media screen and (max-width: 767px) {
+  .search-results {
+    padding: 0;
+  }
+  .filter-box {
+    width: -webkit-fill-available;
+  }
+  /* card */
   .card {
     min-width: 540px;
   }
+  .title {
+    font-size: 16px;
+    line-height: 20px;
+  }
 }
 @media screen and (max-width: 540px) {
+  /* card */
   .card {
     min-width: 0;
     gap: 8px;
@@ -82,9 +123,9 @@
     align-items: start;
   }
   .title {
-    font-size: 16px;
-    line-height: 20px;
-    text-wrap: nowrap;
+    font-size: 14px;
+    line-height: 18px;
+    text-wrap: wrap;
   }
   .content-right {
     padding: 0;
@@ -101,5 +142,11 @@
   }
   .price {
     font-size: 16px;
+  }
+  .button {
+    padding: 4px 8px;
+    height: 25px;
+    font-size: 12px;
+    line-height: 15px;
   }
 }

@@ -1,4 +1,4 @@
-/* .search-form {
+.search-form {
   display: grid;
   grid-template-columns: auto;
   gap: 4px;
@@ -9,13 +9,19 @@
   border-radius: 8px;
   box-shadow: 0 2px 8px 0 rgba(26, 26, 26, 0.16);
   width: 950px;
-} */
-/* .search-submit {
-  margin: 0 !important;
-} */
-
+}
+@media screen and (max-width: 991px) {
+  .search-form {
+    width: auto;
+  }
+}
 @media screen and (max-width: 767px) {
   .mode {
     padding: 0 0 10px;
+  }
+}
+@media screen and (max-width: 360px) {
+  .search-form {
+    margin: 24px auto;
   }
 }

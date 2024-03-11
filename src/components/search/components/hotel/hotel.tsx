@@ -16,34 +16,47 @@ import { SearchResults } from "@/components/search-results";
 
 const today = dayjs();
 
-const fetchHotelList = async (query: {city: string}) => {
+const fetchHotelList = async (query: {
+  city: string;
+  order: string;
+  orderBy: string;
+}) => {
   const response = await axios.get(`http://localhost:4000/hotels`, {
     params: {
       location: query?.city?.toLowerCase(),
+      _sort: query?.orderBy,
+      _order: query?.order,
     },
   });
   return response.data;
 };
 
 export const Hotel = () => {
-  const [filterOption, setFilterOption] = useState("default");
+  const [enabled, setEnabled] = useState(false);
+  const [params, setParams] = useState({
+    city: "",
+    order: "",
+    orderBy: "",
+  });
 
   const { control, handleSubmit, setValue, getValues } =
     useForm<HotelFormValueType>();
   const dispatch = useDispatch<AppDispatch>();
 
-  const { isLoading, isFetching, isError, error, data: hotelData, refetch, isPreviousData } = useQuery(
-    {
-      queryKey: ["hotelListData"], 
-      queryFn: () => fetchHotelList({city: getValues("city")}),
-      enabled: false,
-      onSuccess: (hotelData) => {
-        console.log(hotelData)
-        dispatch(setHotelList(hotelData));
-      },
-      refetchOnWindowFocus: false
+  const {
+    isLoading,
+    isError,
+    error,
+    data: hotelData,
+  } = useQuery({
+    queryKey: ["hotelListData", params],
+    queryFn: () => fetchHotelList(params),
+    enabled: enabled,
+    // refetchOnWindowFocus: true,
+    onSuccess: (hotelData) => {
+      dispatch(setHotelList(hotelData));
     },
-  );
+  });
 
   useEffect(() => {
     try {
@@ -66,7 +79,8 @@ export const Hotel = () => {
   }, []);
 
   const onSubmitHandler = handleSubmit((data) => {
-    refetch();
+    setParams({ ...params, city: getValues("city") });
+    setEnabled(true);
     const query = {
       ...data,
       dates: [data?.dates?.[0].toISOString(), data?.dates?.[1].toISOString()],
@@ -78,12 +92,17 @@ export const Hotel = () => {
   });
 
   const onChangeFilterOption = (v: string) => {
-    setFilterOption(v);
-  }
+    if (!!!v) {
+      setParams({ ...params, orderBy: "", order: "" });
+      return;
+    }
+    setParams({ ...params, orderBy: "price", order: v });
+    setEnabled(true);
+  };
 
   return (
     <>
-      <div className={styles["search-form"]}>
+      <div className={"search-form"}>
         <Form
           name="hotel-search-form"
           onFinish={onSubmitHandler}
@@ -106,7 +125,9 @@ export const Hotel = () => {
                     size="large"
                     {...field}
                   />
-                  <span className="danger-text">{fieldState?.error?.message}</span>
+                  <span className="danger-text">
+                    {fieldState?.error?.message}
+                  </span>
                 </>
               )}
             />
@@ -122,12 +143,16 @@ export const Hotel = () => {
                     minDate={today}
                     popupClassName={styles.calendar}
                     placeholder={["Check-in Date", "Check-out Date"]}
-                    suffixIcon={<CalendarOutlined style={{ fontSize: "14px" }} />}
+                    suffixIcon={
+                      <CalendarOutlined style={{ fontSize: "14px" }} />
+                    }
                     size="large"
                     style={{ width: "100%" }}
                     {...field}
                   />
-                  <span className="danger-text">{fieldState?.error?.message}</span>
+                  <span className="danger-text">
+                    {fieldState?.error?.message}
+                  </span>
                 </>
               )}
             />
@@ -151,7 +176,13 @@ export const Hotel = () => {
       </div>
       {isLoading && <h1>Loading...</h1>}
       {isError && <h2>{error?.message}</h2>}
-      {!!hotelData && <SearchResults mode="hotel" filterOption={filterOption} onChangeFilter={onChangeFilterOption} />}
+      {!!hotelData && (
+        <SearchResults
+          mode="hotel"
+          filterOption={params?.order}
+          onChangeFilter={onChangeFilterOption}
+        />
+      )}
     </>
   );
 };
